@@ -9,6 +9,10 @@ cors = CORS(app)
 
 #---------------------------- pages -------------------------------
 
+@app.route('/')
+def loginDefault():
+    return render_template("login.html")
+
 @app.route('/login-page')
 def login():
     return render_template("login.html")
@@ -16,7 +20,6 @@ def login():
 @app.route('/profile-page')
 def profile():
     return render_template("profile.html")
-
 
 @app.route('/dashboard-page')
 def dashboard():
@@ -37,6 +40,7 @@ def accountcreate():
 @app.route('/graph-page')
 def graph():
     return render_template("graph.html")
+    
 #-------------------- buttons -----------------------------------
 
 @app.route('/login-button',methods = ["GET","POST"])
@@ -130,7 +134,5 @@ def graph_dataset():
         print("Error: {}".format(e))
         return jsonify({"Status":False})
 
-
-
-if __name__ == '__main__':
-    app.run(debug=True,port=5001)
+# if __name__ == '__main__':
+#     app.run(debug=True,port=5001)
