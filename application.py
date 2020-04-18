@@ -135,4 +135,4 @@ def graph_dataset():
         return jsonify({"Status":False})
 
 if __name__ == '__main__':
-    app.run(host = '13.89.172.8',debug=True,port = 5000)
+    app.run()
