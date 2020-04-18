@@ -6,6 +6,7 @@ import os
 
 app = Flask(__name__)
 cors = CORS(app)
+# check
 
 #---------------------------- pages -------------------------------
 
