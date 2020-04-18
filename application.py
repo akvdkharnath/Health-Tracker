@@ -134,3 +134,5 @@ def graph_dataset():
     except Exception as e:
         print("Error: {}".format(e))
         return jsonify({"Status":False})
+if __name__ == '__main__':
+    app.run()
