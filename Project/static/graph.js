@@ -111,18 +111,6 @@ var chart = new CanvasJS.Chart("chartContainer4",
         ]
     });
 chart.render();       
-
-
-
-
-
-
-
-
-
-
-
-
 }})}
 
 
