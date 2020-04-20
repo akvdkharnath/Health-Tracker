@@ -19,7 +19,7 @@ $(document).ready(function(){
     var settings11 = {
        "async": true,
        "crossDomain": true,
-       "url": 'http://health-tracker-windows-application.azurewebsites.net:5555/create-account-button',
+       "url": 'https://health-tracker-windows-application.azurewebsites.net:5555/create-account-button',
        "method": "POST",
        "processData": false,
        "contentType": false,

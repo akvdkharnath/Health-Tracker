@@ -11,7 +11,7 @@ function pageonloadhit() {
     var settings11 = {
         "async": true,
         "crossDomain": true,
-        "url": 'http://health-tracker-windows-application.azurewebsites.net:5555/dashboard-onscreen-load',
+        "url": 'https://health-tracker-windows-application.azurewebsites.net:5555/dashboard-onscreen-load',
         "method": "POST",
         "processData": false,
         "contentType": false,

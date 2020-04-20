@@ -9,7 +9,7 @@ function logindata(){
     var settings11 = {
        "async": true,
        "crossDomain": true,
-       "url": 'http://health-tracker-windows-application.azurewebsites.net:5555/graph-dataset-request',
+       "url": 'https://health-tracker-windows-application.azurewebsites.net:5555/graph-dataset-request',
        "method": "POST",
        "processData": false,
        "contentType": false,
