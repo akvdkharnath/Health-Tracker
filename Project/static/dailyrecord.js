@@ -24,7 +24,7 @@ function result(selecteddate,cin,cout){
      var settings11 = {
         "async": true,
         "crossDomain": true,
-        "url": 'https://health-tracker-windows-application.azurewebsites.net:5555/record-create-button',
+        "url": 'https://health-tracker-windows-application.azurewebsites.net/record-create-button',
         "method": "POST",
         "processData": false,
         "contentType": false,

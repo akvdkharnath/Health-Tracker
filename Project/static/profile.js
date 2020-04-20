@@ -35,7 +35,7 @@ $(document).ready(function(){
     var settings11 = {
        "async": true,
        "crossDomain": true,
-       "url": 'https://health-tracker-windows-application.azurewebsites.net:5555/profile-create-button',
+       "url": 'https://health-tracker-windows-application.azurewebsites.net/profile-create-button',
        "method": "POST",
        "processData": false,
        "contentType": false,

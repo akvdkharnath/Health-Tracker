@@ -18,7 +18,7 @@ function login(username, password){
    var settings11 = {
       "async": true,
       "crossDomain": true,
-      "url": 'https://health-tracker-windows-application.azurewebsites.net:5555/login-button',
+      "url": 'https://health-tracker-windows-application.azurewebsites.net/login-button',
       "method": "POST",
       "processData": false,
       "contentType": false,

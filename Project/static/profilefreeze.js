@@ -8,7 +8,7 @@ function profilefreeze(){
     var settings11 = {
        "async": true,
        "crossDomain": true,
-       "url": 'https://health-tracker-windows-application.azurewebsites.net:5555/profile-freeze-request',
+       "url": 'https://health-tracker-windows-application.azurewebsites.net/profile-freeze-request',
        "method": "POST",
        "processData": false,
        "contentType": false,
