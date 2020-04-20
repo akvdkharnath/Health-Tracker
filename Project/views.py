@@ -49,8 +49,9 @@ def login_button():
         data=data.to_dict()
         data = json.loads(data['file'])
         print("recived data is: {}".format(str(data)))
-        login_button_data = login_button_function(data)
-        return jsonify(login_button_data)
+        # login_button_data = login_button_function(data)
+        # return jsonify(login_button_data)
+        return jsonify("hara")
     except Exception as e:
         print("Error: {}".format(e))
         return jsonify({"Status":False})
