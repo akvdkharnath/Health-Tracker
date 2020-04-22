@@ -1,4 +1,4 @@
-import mysql.connector
+import pyodbc
 import datetime
   
 def calculateAge(birthDate): 
@@ -10,12 +10,12 @@ def execute_query(query,return_value = True,description = False):
 
     return_dic={}
     try:
-        # mydb = mysql.connector.connect(host="sql12.freemysqlhosting.net",user="sql12329633",passwd="76chTkYrBz",database="sql12329633" )
-        # mydb = mysql.connector.connect(host="127.0.0.1",user = "root@localhost",database="health_tracker")
-        mydb = mysql.connector.connect(host="localhost",user = "root",database="health_tracker")
-        
-        cursor = mydb.cursor()
+        # mydb = mysql.connector.connect(host="localhost",user = "root",database="health_tracker")
+        # cursor = mydb.cursor()
 
+        pointer = pyodbc.connect("Driver={ODBC Driver 13 for SQL Server};Server=tcp:my-research.database.windows.net,1433;Database=Health-Tracker-DB;Uid=harnath;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30")
+        cursor=pointer.cursor()
+        
         cursor.execute(query)
         
         if return_value == True:
@@ -28,13 +28,13 @@ def execute_query(query,return_value = True,description = False):
             return_dic["description"] = description
         
         return_dic["Status"] = True
-        mydb.commit()
-        mydb.close()
+        cursor.commit()
+        cursor.close()
         return return_dic
     except Exception as e:
         print("error: ",e)
-        mydb.rollback()
-        mydb.close()
+        cursor.rollback()
+        cursor.close()
         return {"Status":False}
 
 def cal_bmi(height,weight):
